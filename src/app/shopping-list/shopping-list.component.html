@@ -1,0 +1,71 @@
+<div class="col-10">
+
+    <div class="card shadow-lg p-4">
+
+        <h4 class="fontStyle">Ingredients</h4>
+
+        <div class="col-7 ">
+            <div class="row">
+                <input type="text" class="form-control" placeholder="Name">
+                <input type="number" class="form-control mt-3" placeholder="Amount">
+            </div>
+
+            <button class="btn btn-info mt-3">Add Ingredient</button>
+        </div>
+
+        <ul>
+            <li *ngFor="let item of ingredientList">
+                <h4>{{ item.name }}</h4>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+
+<!--https://medium.com/@miki995/angular-6-bootstrap-4-row-columns-same-height-8be5bdb53099-->
+
+<!--<div class="card container shadow-lg p-4">
+
+    <div class="row">
+
+        <ul class="col-3">
+            <li *ngFor="let item of categoryIngredientsList" class="list-group">
+                <div class="card container shadow-lg cardStyle rounded" [ngStyle]="{'background-color': item.color}">
+                    <div class="row h-100">
+                        <img class="iconStyle my-auto" [ngStyle]="{'content': 'url('+item.icon+')'}" alt="">
+                        <h4 class="itemFont my-auto">{{ item.name }}</h4>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="col-9 m-t-md bg-danger">
+            <div class="row mg-bottom" *ngFor="let row of newArrayOfItems">
+              <ng-container *ngFor="let item of row?.items; let i = index">
+                <ul>
+                    <ng-container *ngIf="i">
+                        <li class="list-group">
+                            {{item.title}}
+                        </li>
+                    </ng-container>
+                </ul>
+              </ng-container>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="container m-t-md">
+    <div class="row mg-bottom" *ngFor="let row of newArrayOfItems">
+      <ng-container *ngFor="let item of row?.items">
+        <ul>
+            <li class="list-group">
+                {{item.title}}
+            </li>
+        </ul>
+      </ng-container>
+    </div>
+</div>-->

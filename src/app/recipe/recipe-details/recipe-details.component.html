@@ -1,0 +1,72 @@
+<div class="card col-10 offset-1 shadow-lg cardStyle">
+
+    <div class="row">
+
+        <div class="col-3 imgContainer">
+            <img src="{{ recipe.getImage() }}" 
+                alt="" class="rounded-circle img-thumbnail shadow-lg imageStyle">
+            <h4 class="fontTitleStyle">{{ recipe.getName() }}</h4>
+        </div>
+
+        <div class="col-5 containerStyle">
+            <p class="containerFont text-justify">
+                {{ recipe.steps }}
+                <!--<img class="imgStep" src="../../../assets/img/number_1.png" alt="">
+                Cook noodles according to package directions; drain. Meanwhile, in a Dutch oven, cook sausage, 
+                beef and onion over medium heat 8-10 minutes or until meat is no longer pink, breaking up meat 
+                into crumbles. Add garlic; cook 1 minute. Drain.
+                <br>
+                <img class="imgStep" src="../../../assets/img/number_2.png" alt="">
+                Stir in tomatoes, tomato paste, water, sugar, 3 tablespoons parsley, basil, fennel, 1/2 teaspoon
+                salt and pepper; bring to a boil. Reduce heat; simmer, uncovered, 30 minutes, stirring occasionally.
+                
+                <br>
+                <img class="imgStep" src="../../../assets/img/number_3.png" alt="">
+                In a small bowl, mix egg, ricotta cheese, and remaining parsley and salt.
+            </p>-->
+        </div>
+
+        <div class="col-4">
+            <h5 class="subtitleFontStyle">Ingredients</h5>
+            
+            <ul class="listStyle">
+                <li class="list-group" *ngFor="let item of ingredientsList"> 
+                    <div class="card shadow mb-2 itemStyle">
+                        <div class="row">
+                            <div class="col-1 ml-3">
+                                <img class="itemImg" src="{{ item.icon }}" alt="">
+                            </div>
+                            
+                            <div class="col-4 m-1">
+                                <h6 class="fontStyle">{{ item.name }}</h6>
+                            </div>
+                    
+                            <div class="col-2">
+                                <h6 class="fontStyle text-right">{{ item.amount }}</h6>
+                            </div>
+
+                            <div class="col-2">
+                                <h6 class="fontStyle text-right">{{ item.measurementUnit }}</h6>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+    
+            <div class="row buttonContainerStyle justify-content-center">
+                <img class="buttonStyle mr-4" src="../../../assets/img/pencil.png" alt="">
+                <img class="buttonStyle" src="../../../assets/img/cancel-button.png" alt="">
+            </div>
+
+            <button routerLinkActive="active" (click)="showShopingList()">shopping list</button>
+    
+        </div>
+
+    </div>
+</div>
+
+<!--<div class="hidden col-5 shadow-lg">
+<h1>dfdfdflllll</h1>
+</div>-->
+
+<!--https://itnext.io/angular-create-your-own-modal-boxes-20bb663084a1-->

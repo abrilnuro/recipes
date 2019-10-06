@@ -1,0 +1,22 @@
+<div class="col-10 offset-2 p-3 rounded">
+
+    <ul>
+
+        <li class="list-group" *ngFor="let item of recipeList; let i = index">
+            <div class="card col-4 rounded shadow-lg mt-2"
+                recipeItemDirective (click)='onClickItem(i)'>
+
+                <div>
+                    <div [ngStyle]="{'background-image': 'url(' + item.image + ')'}" >
+                        <img alt="">
+                    </div>
+                    
+                    <h4>{{ item.name }}</h4>
+                </div>
+            
+            </div>
+        </li>
+
+    </ul>
+
+</div>

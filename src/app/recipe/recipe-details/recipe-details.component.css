@@ -1,0 +1,90 @@
+.cardStyle{
+    border-radius: 10px;
+    padding: 25px;
+}
+.imageStyle{
+    width: 20vw;
+    height: 20vw;
+}
+.fontTitleStyle{
+    background-color: #FFB300;
+    color: white;
+    font-size: 2vw;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    padding: 6px 10px 6px 10px;
+    display:inline-block; 
+    margin-top: 230px;
+    position: absolute;
+    left: 30px;
+}
+.containerStyle{
+    background-color: #FFB300;
+    box-shadow: 13px 14px grey;
+    padding: 10px;
+    border-radius: 10px;    
+}
+.containerFont{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3vw;
+    color: white;
+    padding: 8px;
+
+    height: 20vw;
+    overflow-y: scroll;
+}
+.imgStep{
+    width: 3vw;
+    height: 3vw;
+}
+.subtitleFontStyle{
+    width: 20vw;
+    background-color: #00BFA5;
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    padding: 6px 10px 6px 10px;
+    margin-left: 5vw;
+}
+.listStyle{
+    margin-left: 5vw;
+}
+.buttonStyle{
+    width: 4vw;
+    height: 4vw;;
+}
+.buttonContainerStyle{
+    width: 20vw;
+    height: 5vw;
+    margin-left: 5vw;
+    margin-top: 10vw;
+}
+
+/*card*/
+.itemStyle{
+    background-color: #ff5252;
+    width: 15vw;
+    height: 2.5vw;
+}
+.itemImg{
+    width: 2vw;
+    height: 2vw;
+}
+.imgRecipe{
+    width: 2vw;
+    height: 2vw;
+}
+.fontStyle{
+    color: white;
+    font-size: 1vw;
+}
+
+.hidden{
+    background-color: #ff5252;
+    position: absolute;
+    top: 0px;
+    left:  0px;
+    z-index:  99;
+
+}

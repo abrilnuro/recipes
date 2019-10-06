@@ -1,0 +1,17 @@
+.itemStyle{
+    background-color: #ffb591;
+    width: 15vw;
+    height: 2.5vw;
+}
+.itemImg{
+    width: 2vw;
+    height: 2vw;
+}
+.imgRecipe{
+    width: 2vw;
+    height: 2vw;
+}
+.fontStyle{
+    color: white;
+    font-size: 1vw;
+}

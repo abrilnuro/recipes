@@ -1,0 +1,13 @@
+.cardStyle{
+    height: 3vw;
+    margin-bottom: 10px;
+}
+.iconStyle{
+    width: 2.4vw;
+    height: 2.4vw;
+}
+.itemFont{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 1.5vw; 
+}
