@@ -6,11 +6,11 @@
 
         <div class="col-7 ">
             <div class="row">
-                <input type="text" class="form-control" placeholder="Name">
-                <input type="number" class="form-control mt-3" placeholder="Amount">
+                <input type="text" class="form-control" placeholder="Name" #ingredientName>
+                <input type="number" class="form-control mt-3" placeholder="Amount" #ingredientAmount>
             </div>
 
-            <button class="btn btn-info mt-3">Add Ingredient</button>
+            <button class="btn btn-info mt-3" (click)="addIngredients()">Add Ingredient</button>
         </div>
 
         <ul>

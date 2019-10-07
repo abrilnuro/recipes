@@ -23,6 +23,11 @@ export class IngredientsService {
         console.log(this.ingredientsList);
     }
 
+    addIngredient(ingredient: Ingredient) {
+        console.log(ingredient.getName());
+        this.ingredientsList.push(ingredient);
+    }
+
     getIngredients(): Ingredient[] {
         return this.ingredientsList;
     }
