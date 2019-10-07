@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Recipe } from '../shared/recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
+import { RecipeService } from '../recipe/recipe.service';
 
 @Component({
   selector: 'app-recipe-add',
@@ -17,7 +18,7 @@ export class RecipeAddComponent implements OnInit {
   ingredientsList: Ingredient[] = [];
   nStep: number = 1;
 
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit() {
   }
@@ -50,6 +51,7 @@ export class RecipeAddComponent implements OnInit {
   addRecipe() {
     const name = this.newRecipeName.nativeElement.value;
     const image = '';
-    //let recipe = new Recipe();
+    const recipe = new Recipe(name, image, this.ingredientsList, this.stepsList);
+    this.recipeService.addRecipe(recipe);
   }
 }
