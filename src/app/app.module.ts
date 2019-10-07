@@ -13,10 +13,12 @@ import { RecipeDetailsIngredientComponent } from './recipe/recipe-details/recipe
 import { RecipeService } from './recipe/recipe.service';
 import { RecipeItemDirective } from './recipe/recipe-item.directive';
 import { IngredientsService } from './shared/ingredents.service';
+import { RecipeAddComponent } from './recipe-add/recipe-add.component';
 
 const appRoutes: Routes = [
   {path: '', component: RecipeComponent},
   {path: 'recipe', component: RecipeComponent},
+  {path: 'recipe-new', component: RecipeAddComponent},
   {path: 'shopping-list', component: ShoppingListComponent}
 ];
 
@@ -30,7 +32,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     RecipeDetailsComponent,
     RecipeDetailsIngredientComponent,
-    RecipeItemDirective
+    RecipeItemDirective,
+    RecipeAddComponent
   ],
   imports: [
     BrowserModule,
