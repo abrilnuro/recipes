@@ -16,6 +16,7 @@ import { IngredientsService } from './shared/ingredents.service';
 
 const appRoutes: Routes = [
   {path: '', component: RecipeComponent},
+  {path: 'recipe', component: RecipeComponent},
   {path: 'shopping-list', component: ShoppingListComponent}
 ];
 
