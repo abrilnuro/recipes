@@ -14,8 +14,14 @@
         </div>
 
         <ul>
-            <li *ngFor="let item of ingredientList">
-                <h4>{{ item.name }}</h4>
+            <li class="list-group" *ngFor="let item of ingredientList">
+                <div class="card mt-1">
+                    <div class="row">
+                        <h5>{{ item.name }}</h5>
+                        <span>{{ item.amount }}</span>
+                    </div>
+                </div>
+                
             </li>
         </ul>
 
