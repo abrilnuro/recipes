@@ -14,6 +14,7 @@ export class RecipeDetailsComponent implements OnInit {
 
   @Input() recipe: Recipe;
   ingredientsList: Ingredient[];
+  stepsList: string[];
 
 
   constructor(private recipeService: RecipeService,
@@ -23,6 +24,7 @@ export class RecipeDetailsComponent implements OnInit {
   ngOnInit() {
     this.recipe = this.recipeService.getRecipeByIndex(0);
     this.ingredientsList = this.recipe.getIngredients();
+    this.stepsList = this.recipe.getSteps();
   }
 
   showShopingList() {

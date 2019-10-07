@@ -6,6 +6,8 @@ import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
   styleUrls: ['./recipe-add.component.css']
 })
 export class RecipeAddComponent implements OnInit {
+  @ViewChild('newIngredientName', {static: false}) newIngredientName: ElementRef;
+  @ViewChild('newIngredientImage', {static: false}) newIngredientImage: ElementRef;
   @ViewChild('newIngredientStep', {static: false}) newStep: ElementRef;
   stepsList: string[] = [];
   nStep: number = 1;

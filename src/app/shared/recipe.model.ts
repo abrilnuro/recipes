@@ -4,9 +4,9 @@ export class Recipe {
     private name: string;
     private image: string;
     private ingredientList: Ingredient[];
-    private steps: string;
+    private steps: string[];
 
-    constructor(name: string, image: string, ingredientList: Ingredient[], steps: string) {
+    constructor(name: string, image: string, ingredientList: Ingredient[], steps: string[]) {
         this.name = name;
         this.image = image;
         this.ingredientList = ingredientList;
@@ -37,7 +37,7 @@ export class Recipe {
         return this.ingredientList;
     }
 
-    setSteps(steps: string) {
+    setSteps(steps: string[]) {
         this.steps = steps;
     }
 

@@ -9,21 +9,14 @@
         </div>
 
         <div class="col-5 containerStyle">
-            <p class="containerFont text-justify">
-                {{ recipe.steps }}
-                <!--<img class="imgStep" src="../../../assets/img/number_1.png" alt="">
-                Cook noodles according to package directions; drain. Meanwhile, in a Dutch oven, cook sausage, 
-                beef and onion over medium heat 8-10 minutes or until meat is no longer pink, breaking up meat 
-                into crumbles. Add garlic; cook 1 minute. Drain.
-                <br>
-                <img class="imgStep" src="../../../assets/img/number_2.png" alt="">
-                Stir in tomatoes, tomato paste, water, sugar, 3 tablespoons parsley, basil, fennel, 1/2 teaspoon
-                salt and pepper; bring to a boil. Reduce heat; simmer, uncovered, 30 minutes, stirring occasionally.
-                
-                <br>
-                <img class="imgStep" src="../../../assets/img/number_3.png" alt="">
-                In a small bowl, mix egg, ricotta cheese, and remaining parsley and salt.
-            </p>-->
+            <ul>
+                <li class="list-group" *ngFor="let item of stepsList; let i = index">
+                    <div>
+                        <h5>Step {{ i+1 }}</h5>
+                        <p>{{ item }}</p>
+                    </div>
+                </li>
+            </ul>
         </div>
 
         <div class="col-4">
