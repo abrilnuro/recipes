@@ -13,7 +13,7 @@ export class RecipeListComponent implements OnInit {
   @Output() selectedItem = new EventEmitter<number>();
 
   constructor(private recipeService: RecipeService) {
-    this.recipeService.populateList();
+    //this.recipeService.populateList();
   }
 
   ngOnInit() {
