@@ -34,7 +34,7 @@
             <li class="list-group" *ngFor="let item of ingredientsList; let i = index">
                 <div class="row">
                     <h5>{{ item.name }}</h5>
-                    <h5>{{ item.amount }}</h5>
+                    <span>{{ item.getAmount() }}</span>
                     <button (click)="deleteIngredient(i)">X</button>
                 </div>
             </li>
