@@ -1,18 +1,24 @@
 <div class="parentContainer">
-    <ul>
-        <li class="list-group" *ngFor="let item of recipeList; let i = index">
-            <div class="card shadow cardStyle"
-                recipeItemDirective (click)='onClickItem(i)'>
+    <div *ngIf="recipeListSize !== 0; else emptyList">
+        <ul>
+            <li class="list-group" *ngFor="let item of recipeList; let i = index">
+                <div class="card shadow cardStyle"
+                    recipeItemDirective (click)='onClickItem(i)'>
 
-                    <div class="imageContainerStyle" 
-                        [ngStyle]="{'background-image': 'url(' + item.image + ')'}" >
-                        
-                        <img alt="">
-                        <h5 class="fontNameStyle">{{ item.name }}</h5>
-                    </div>
-            </div>
-        </li>
-    </ul>
+                        <div class="imageContainerStyle" 
+                            [ngStyle]="{'background-image': 'url(' + item.image + ')'}" >
+                            
+                            <img alt="">
+                            <h5 class="fontNameStyle">{{ item.name }}</h5>
+                        </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <ng-template #emptyList>
+            <h4 class="fontEmptyList">No recipes</h4>
+    </ng-template>
 </div>
 <!--<button routerLinkActive="active" routerLink="/recipe-new">New</button>-->
 

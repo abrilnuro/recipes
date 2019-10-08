@@ -11,13 +11,17 @@ export class RecipeListComponent implements OnInit {
 
   recipeList: Recipe[] = [];
   @Output() selectedItem = new EventEmitter<number>();
+  recipeListSize: number = 0;
 
   constructor(private recipeService: RecipeService) {
     //this.recipeService.populateList();
   }
 
   ngOnInit() {
-    this.recipeList = this.recipeService.getRecipeList();
+    this.recipeListSize = this.recipeService.getRecipeListSize();
+    if (this.recipeListSize !== 0) {
+      this.recipeList = this.recipeService.getRecipeList();
+    }
   }
 
   onClickItem(index: number) {
