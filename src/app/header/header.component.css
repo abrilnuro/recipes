@@ -17,7 +17,6 @@
 
 .navbarStyle{
     background-color: #ef9a9a;
-    margin-top: 130px;
 }
 .navbarTitleFont{
     font-family: 'Courier New', Courier, monospace;
@@ -28,4 +27,8 @@
 .vl {
     border-left: 1px solid white;
     margin: 8px;
+}
+.headerImage{
+    height: 15vw;
+    background-image: url('https://st.depositphotos.com/1119809/4337/v/950/depositphotos_43372591-stock-illustration-vintage-kitchen-pattern.jpg');
 }
