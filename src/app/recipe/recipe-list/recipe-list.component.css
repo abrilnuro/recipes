@@ -1,7 +1,9 @@
 .parentContainer{
+    margin-top: 2vw;
     min-height: 40vw;
     max-height: 40vw;
     background-color: grey;
+    overflow:auto;
 }
 ul{
     min-height: 40vw;

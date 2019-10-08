@@ -89,7 +89,9 @@
 
 }*/
 .parentContainer{
+    margin-top: 2vw;
     min-height: 40vw;
+    max-height: 40vw;
     background-color: grey;
 }
 .imageContainerStyle{
