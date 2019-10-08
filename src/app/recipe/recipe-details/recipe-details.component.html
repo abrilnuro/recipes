@@ -1,4 +1,4 @@
-<div class="card col-10 offset-1 shadow-lg cardStyle">
+<!--<div class="card col-10 offset-1 shadow-lg cardStyle">
 
     <div class="row">
 
@@ -56,10 +56,73 @@
         </div>
 
     </div>
-</div>
+</div>-->
 
 <!--<div class="hidden col-5 shadow-lg">
 <h1>dfdfdflllll</h1>
 </div>-->
 
 <!--https://itnext.io/angular-create-your-own-modal-boxes-20bb663084a1-->
+
+
+
+<div class="parentContainer">
+
+    <div *ngIf="recipeListSize !== 0; else noRecipe">
+
+        <div class="row">
+
+            <div class="col-6 imageContainerStyle">
+                <img src="{{ recipe.getImage() }}" 
+                    alt="No image available" class="imageStyle">
+                <h4 class="fontTitleStyle">{{ recipe.getName() }}</h4>
+            </div>
+            
+            <div class="buttonContainer">
+                <button routerLinkActive="active" (click)="showShopingList()">shopping list</button>
+                <button routerLinkActive="active" (click)="showShopingList()">Edit</button>
+                <button routerLinkActive="active" (click)="showShopingList()">Delete</button>
+            </div>
+
+            <div class="stepsContainerStyle col-6">
+                <ul>
+                    <li class="list-group" *ngFor="let item of stepsList; let i = index">
+                        <div>
+                            <h5 class="fontStepsStyle">Step {{ i+1 }}</h5>
+                            <p class="fontStepsStyle">{{ item }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="ingredientsContainerStyle col-4 bg-dark">
+            <ul>
+                <li class="list-group" *ngFor="let item of ingredientsList"> 
+                    <div class="row">
+                        <div class="col-4 m-1">
+                            <h6 class="fontIngredientsStyle">{{ item.name }}</h6>
+                        </div>
+                
+                        <div class="col-2">
+                            <h6 class="fontIngredientsStyle text-right">{{ item.amount }}</h6>
+                        </div>
+                        <div class="col-2">
+                            <h6 class="fontIngredientsStyle text-right">{{ item.measurementUnit }}</h6>
+                        </div>
+                    </div> 
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <ng-template #noRecipe> 
+        <div>
+            <h4 class="fontNoRecipie">Select a recipe from the list</h4>
+        </div>
+    </ng-template>
+
+</div>
+    

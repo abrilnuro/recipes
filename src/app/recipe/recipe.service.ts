@@ -16,9 +16,9 @@ export class RecipeService {
         ingredientList.push(ingredient2);
         ingredientList.push(ingredient3);
 
-        const recipe1 = new Recipe('Soup', '../../../assets/img/number_2.png', ingredientList, steps);
-        const recipe2 = new Recipe('Cake', '../../../assets/img/number_1.png', ingredientList, steps);
-        const recipe3 = new Recipe('Pizza', '../../../assets/img/cancel-button.png', ingredientList, steps);
+        const recipe1 = new Recipe('Soup', '../../../assets/img/lasagna.jpg', ingredientList, steps);
+        const recipe2 = new Recipe('Cake', '../../../assets/img/lasagna.jpg', ingredientList, steps);
+        const recipe3 = new Recipe('Pizza', '../../../assets/img/lasagna.jpg', ingredientList, steps);
 
         this.recipeList.push(recipe1);
         this.recipeList.push(recipe2);
@@ -35,5 +35,9 @@ export class RecipeService {
 
     getRecipeList(): Recipe[] {
         return this.recipeList;
+    }
+
+    getRecipeListSize(): number {
+        return this.recipeList.length;
     }
 }

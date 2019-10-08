@@ -1,24 +1,18 @@
-<div class="col-10 offset-2 p-3 rounded">
-
+<div class="parentContainer">
     <ul>
-
         <li class="list-group" *ngFor="let item of recipeList; let i = index">
-            <div class="card col-4 rounded shadow-lg mt-2"
+            <div class="card shadow cardStyle"
                 recipeItemDirective (click)='onClickItem(i)'>
 
-                <div>
-                    <div [ngStyle]="{'background-image': 'url(' + item.image + ')'}" >
+                    <div class="imageContainerStyle" 
+                        [ngStyle]="{'background-image': 'url(' + item.image + ')'}" >
+                        
                         <img alt="">
+                        <h5 class="fontNameStyle">{{ item.name }}</h5>
                     </div>
-                    
-                    <h4>{{ item.name }}</h4>
-                </div>
-            
             </div>
         </li>
-
     </ul>
-
-    <!--<button routerLinkActive="active" routerLink="/recipe-new">New</button>-->
-
 </div>
+<!--<button routerLinkActive="active" routerLink="/recipe-new">New</button>-->
+

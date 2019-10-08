@@ -1,10 +1,13 @@
 <div>
   <button routerLinkActive="active" routerLink="/recipe-new">New</button>
-  <div>
-      <app-recipe-details [recipe]="recipe"></app-recipe-details>
-  </div>
-  <div>
-      <app-recipe-list (selectedItem)="onSelectedItem($event)"></app-recipe-list>
+  <div class="row">
+    <div class="col-9">
+        <app-recipe-details [recipe]="recipe"></app-recipe-details>
+    </div>
+    <div class="col-3">
+        <app-recipe-list (selectedItem)="onSelectedItem($event)"></app-recipe-list>
+    </div>
+      
   </div>
 </div>
 

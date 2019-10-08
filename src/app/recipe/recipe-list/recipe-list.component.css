@@ -1,0 +1,33 @@
+.parentContainer{
+    min-height: 40vw;
+    max-height: 40vw;
+}
+ul{
+    min-height: 40vw;
+    max-height: 40vw;
+    padding: 0;
+    list-style-type: none;  
+}
+.cardStyle{
+    height: 13vw;
+    z-index: 1000;
+    float: left;
+}
+.imageContainerStyle{
+    position: relative;
+    height: 13vw;
+}
+.fontNameStyle{
+    font-size: 2.5vw;
+    float: left;
+    position: absolute;
+    left: 0vw;
+    top: 0vw;
+    z-index: 1000;
+    background-color: #92AD40;
+    padding: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-flexbox
+}

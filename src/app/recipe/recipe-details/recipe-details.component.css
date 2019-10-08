@@ -1,4 +1,4 @@
-.cardStyle{
+/*.cardStyle{
     border-radius: 10px;
     padding: 25px;
 }
@@ -59,9 +59,9 @@
     height: 5vw;
     margin-left: 5vw;
     margin-top: 10vw;
-}
+}*/
 
-/*card*/
+/*card
 .itemStyle{
     background-color: #ff5252;
     width: 15vw;
@@ -87,4 +87,62 @@
     left:  0px;
     z-index:  99;
 
+}*/
+.parentContainer{
+    min-height: 40vw;
+    background-color: grey;
+}
+.imageContainerStyle{
+    width: 30vw;
+    height: 30vw;
+    position: relative;
+}
+.imageStyle{
+    width: 30vw;
+    height: 30vw;
+}
+.fontTitleStyle{
+    min-width: 20vw;
+    max-width: 40vw;
+    font-size: 2.5vw;
+    float: left;
+    position: absolute;
+    left: 20vw;
+    top: 2.5vw;
+    z-index: 1000;
+    background-color: #92AD40;
+    padding: 5px;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-flexbox
+}
+.stepsContainerStyle{
+    min-height: 30vw;
+    position: absolute;
+    left: 35vw;
+    top: 10vw;
+}
+.fontStepsStyle{
+    font-size: 2vw;
+}
+.ingredientsContainerStyle{
+    margin: 2vw;
+}
+.fontIngredientsStyle{
+    font-size: 1.5vw;
+}
+.buttonContainer{
+    position: absolute;
+    right: 0;
+    margin: 3vw;
+}
+button{
+    width: 8vw;
+    height: 3vw;
+    font-size: 0.7vw;
+}
+.fontNoRecipie{
+    color: white;
+    text-align: center;
 }
