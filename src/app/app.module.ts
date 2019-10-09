@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatAutocompleteModule } from '@angular/material/autocomplete';
+import {MatFormFieldModule} from '@angular/material/form-field';
+
 
 import { AppComponent } from './app.component';
 import { RecipeComponent } from './recipe/recipe.component';
@@ -14,12 +19,16 @@ import { RecipeService } from './recipe/recipe.service';
 import { RecipeItemDirective } from './recipe/recipe-item.directive';
 import { IngredientsService } from './shared/ingredents.service';
 import { RecipeAddComponent } from './recipe-add/recipe-add.component';
+import { StoreComponent } from './store/store.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
   {path: '', component: RecipeComponent},
   {path: 'recipe', component: RecipeComponent},
   {path: 'recipe-new', component: RecipeAddComponent},
-  {path: 'shopping-list', component: ShoppingListComponent}
+  {path: 'shopping-list', component: ShoppingListComponent},
+  {path: 'store', component: StoreComponent}
+
 ];
 
 @NgModule({
@@ -33,11 +42,18 @@ const appRoutes: Routes = [
     RecipeDetailsComponent,
     RecipeDetailsIngredientComponent,
     RecipeItemDirective,
-    RecipeAddComponent
+    RecipeAddComponent,
+    StoreComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatAutocompleteModule,
+    MatFormFieldModule
   ],
   providers: [
     RecipeService,
